@@ -14,7 +14,7 @@ window.onscroll = () =>{
         header.classList.remove('active');
     }
 }
-let countDate = new Date('may 4, 2023 00:00:00').getTime();
+let countDate = new Date('july 7, 2023 00:00:00').getTime();
 function countDown() {
     let now = new Date().getTime();
     gap = countDate - now;
