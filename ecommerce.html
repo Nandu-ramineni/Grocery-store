@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ecommerce.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="lemon.ico">
+    <title>Online grocery Store</title>
+</head>
+<body>
+    <header>
+        <div class="header-1">
+            <a href="#" class="logo"><i class="fa-solid fa-basket-shopping"></i>GMart</a>
+            <form action="" class="searchbox-container">
+                <input type="search" id="search-box" placeholder="Search Store">
+                <label for="search-box"  class="fa-solid fa-magnifying-glass"></label>
+            </form>
+        </div>
+        <div class="header-2">
+            <div id="menu-bar" class="fa fa-sharp fa-light fa-bars-staggered"></div>
+            <nav class="navbar">
+                <a href="#Home">Home</a>
+                <a href="#categories">categories</a>
+                <a href="#products">products</a>
+                <a href="#deals">Deals</a>
+                <a href="#contact">contact</a>
+            </nav>
+            <div class="icons">
+                <a href=""><i class="fa-solid fa-cart-shopping" id="cart-icon"></i></a>
+                <a href=""><i class="fa-solid fa-heart"></i></a>
+                <a href=""><i class="fa-solid fa-user"></i></a>
+        </div>
+        </div>
+        <div class="shopping-cart">
+            <div class="cart-box">
+                <i class="fas fa-times"></i>
+                <img src="./img/apple.png" alt="">
+                <div class="cart-content">
+                <h3>Organic food</h3>
+                <span class="quantity">1</span>
+                <span class="multiply">x</span>
+                <span class="price">₹99</span>
+            </div>
+            </div>
+            <h3 class="total">Total: <span>99</span></h3>
+            <a href="#" class="btn">Check out</a>
+        </div>
+    </header>
+    <section class="Home" id="Home">
+        <div class="image">
+            <img src="./img/e1.png" alt="">
+        </div>
+        <div class="content">
+            <span>Super Fresh and Natural</span>
+            <h3>All your Daily Need Products</h3>
+            <a href="#categories" class="btn">Shop Now</a>
+        </div>
+    </section>
+    <section class="banner-box">
+        <div class="banner">
+            <img src="./img/banneri1.jpg" alt="">
+            <div class="info">
+                <h3>Special Offer</h3>
+                <p>Upto 30% off</p>
+                <a href="#" class="btn">Check Out</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="./img/banneri2.jpg" alt="">
+            <div class="info">
+                <h3>Limited Offer</h3>
+                <p>Flat 60% off</p>
+                <a href="#" class="btn">Check Out</a>
+            </div>
+        </div>
+    </section>
+    <section class="categories" id="categories">
+        <h1 class="heading">Shopy by <span>category</span></h1>
+        <div class="containers">
+            <div class="box">
+                <h3>Vegetables</h3>
+                <p>Upto 40% off</p>
+                <img src="./img/e5.png" alt="">
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+            <div class="box">
+                <h3>Fruits</h3>
+                <p>flat 20% off</p>
+                <img src="./img/fruits.png" alt="">
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+            <div class="box">
+                <h3>Meat</h3>
+                <p>Upto 30% off</p>
+                <img src="./img/meat.png" alt="">
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+            <div class="box">
+                <h3>Juices</h3>
+                <p>Upto 40% off</p>
+                <img src="./img/juices.png" alt="">
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+    <section class="products" id="products">
+        <h1 class="heading">Latest <span>Products</span></h1>
+        <div class="containers">
+            <div class="box">
+                <span class="discount">25%</span>
+                <div class="icons">
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <a href=""><i class="fa fa-light fa-share-nodes"></i></a>
+                    <a href=""><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <img src="./img/mango.png" alt="">
+                <h3 id="productName">Mangoes</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="price" id="productPrice">₹150 <span>$180</span></div>
+                <div class="quantity">
+                    <span> Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                    <span> /Kg</span>
+                </div>
+                <a href="#" class="btn" onclick="addToCart()">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">45%</span>
+                <div class="icons">
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <a href=""><i class="fa fa-light fa-share-nodes"></i></a>
+                    <a href=""><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <img src="./img/oranges.png" alt="">
+                <h3>Oranges</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="price">₹120 <span>₹150</span></div>
+                <div class="quantity">
+                    <span> Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                    <span> /Kg</span>
+                </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">15%</span>
+                <div class="icons">
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <a href=""><i class="fa fa-light fa-share-nodes"></i></a>
+                    <a href=""><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <img src="./img/strawberry.png" alt="">
+                <h3>strawberry</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="price">₹190 <span>₹199</span></div>
+                <div class="quantity">
+                    <span> Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                    <span> /Kg</span>
+                </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">30%</span>
+                <div class="icons">
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <a href=""><i class="fa fa-light fa-share-nodes"></i></a>
+                    <a href=""><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <img src="./img/ice cream.png" alt="">
+                <h3>Ice-Creams</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="price">₹70 <span>₹50</span></div>
+                <div class="quantity">
+                    <span> Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                    <span> /Kg</span>
+                </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">8%</span>
+                <div class="icons">
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <a href=""><i class="fa fa-light fa-share-nodes"></i></a>
+                    <a href=""><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <img src="./img/tomato.png" alt="">
+                <h3>Organic Tomatoes</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="price">₹60 <span>₹120</span></div>
+                <div class="quantity">
+                    <span> Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                    <span> /Kg</span>
+                </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">12%</span>
+                <div class="icons">
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <a href=""><i class="fa fa-light fa-share-nodes"></i></a>
+                    <a href=""><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <img src="./img/capsicum.png" alt="">
+                <h3>Capsicum</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="price">₹30 <span>₹50</span></div>
+                <div class="quantity">
+                    <span> Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                    <span> /Kg</span>
+                </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">32%</span>
+                <div class="icons">
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <a href=""><i class="fa fa-light fa-share-nodes"></i></a>
+                    <a href=""><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <img src="./img/cauliflower.png" alt="">
+                <h3>Cauliflower</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="price">₹250 <span>₹270</span></div>
+                <div class="quantity">
+                    <span> Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                    <span> /Kg</span>
+                </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">18%</span>
+                <div class="icons">
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <a href=""><i class="fa fa-light fa-share-nodes"></i></a>
+                    <a href=""><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <img src="./img/grapes.png" alt="">
+                <h3>Fresh Grapes</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="price">₹72 <span>₹69</span></div>
+                <div class="quantity">
+                    <span> Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                    <span> /Kg</span>
+                </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">4%</span>
+                <div class="icons">
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <a href=""><i class="fa fa-light fa-share-nodes"></i></a>
+                    <a href=""><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <img src="./img/promogranate.png" alt="">
+                <h3>Promogranate</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="price">₹250 <span>₹199</span></div>
+                <div class="quantity">
+                    <span> Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                    <span> /Kg</span>
+                </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">12%</span>
+                <div class="icons">
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <a href=""><i class="fa fa-light fa-share-nodes"></i></a>
+                    <a href=""><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <img src="./img/apple.png" alt="">
+                <h3>Green Apples</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="price">₹270 <span>₹249</span></div>
+                <div class="quantity">
+                    <span> Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                    <span> /Kg</span>
+                </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">18%</span>
+                <div class="icons">
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <a href=""><i class="fa fa-light fa-share-nodes"></i></a>
+                    <a href=""><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <img src="./img/banana.png" alt="">
+                <h3>Banana</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="price">₹40 <span>₹70</span></div>
+                <div class="quantity">
+                    <span> Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                    <span> /Kg</span>
+                </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="box">
+                <span class="discount">24%</span>
+                <div class="icons">
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <a href=""><i class="fa fa-light fa-share-nodes"></i></a>
+                    <a href=""><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <img src="./img/guava.png" alt="">
+                <h3>Guava</h3>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </div>
+                <div class="price">₹80 <span>₹149</span></div>
+                <div class="quantity">
+                    <span> Quantity : </span>
+                    <input type="number" min="1" max="100" value="1">
+                    <span> /Kg</span>
+                </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+        </div>
+    </section>
+    <section class="deals" id="deals">
+        <div class="content">
+            <h3 class="tittle">Deal of the day</h3>
+            <p>"Not only that, you can avail “grocery from Rs. 1” deals every day! You can even find exciting bank offers across leading banks like HDFC, SBI, & Axis bank ..."</p>
+            <div class="count-down">
+                <div class="box">
+                    <h3 id="day">00</h3><span>Days</span>
+                </div>
+                <div class="box">
+                    <h3 id="hour">00</h3><span>hours</span>
+                </div>
+                <div class="box">
+                    <h3 id="minute">00</h3><span>minute</span>
+                </div>
+                <div class="box">
+                    <h3 id="seconds">00</h3><span>seconds</span>
+                </div>
+            </div>
+            <a href="#" class="btn">Check Out Deals</a>
+        </div>
+    </section>
+    <section class="manage" >
+        <h1 class="heading">STore  <span>Manged</span> by</h1>
+        <div class="manages">
+            <div class="box">
+                <h3>Nandu</h3>
+                <img src="./img/Nandu.jpg" alt="">
+                <div class="icons">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Prem</h3>
+                <img src="https://www.beyoung.in/blog/wp-content/uploads/2018/09/b53816e7b6a8d2ce3b4f120fda1e242f.jpg" alt="">
+                <div class="icons">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Jaqline</h3>
+                <img src="https://www.mckinsey.com/~/media/mckinsey/featured%20insights/diversity%20and%20inclusion/women%20in%20the%20workplace%202022/women%20in%20the%20workplace%202022_standard_1536x1536.jpg" alt="">
+                <div class="icons">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Angelia</h3>
+                <img src="https://previews.123rf.com/images/vgstudio/vgstudio2009/vgstudio200900141/156185017-portrait-of-young-beautiful-businesswoman-in-blue-confident-suit-with-clipboard-writing-blond-woman.jpg" alt="">
+                <div class="icons">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>Contact</span> us</h1>
+        <form action="">
+            <div class="inputbox">
+                <input type="text" placeholder="Enter Your Name">
+                <input type="email" placeholder="Enter Your mail">
+            </div>
+            <div class="inputbox">
+                <input type="number" placeholder="Number">
+                <input type="text" placeholder="Subject">
+            </div>
+            <textarea placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="send Message" class="btn">
+        </form>
+    </section>
+    <section class="newsletter">
+        <h3>Stay tuned for <span>Exciting Offers</span></h3>
+        <form action="">
+            <input class="box" type="email" name="" id="" placeholder="Enter your mail">
+            <input type="submit" value="Subscribe" class="btn">
+        </form>
+    </section>
+    <section class="footer">
+        <div class="boxcontainer">
+            <div class="box">
+                <a href="#" class="logo"><i class="fa-solid fa-basket-shopping"></i>GMart</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequuntur quidem consequatur aliquid necessitatibus ea qui saepe fugiat eos, odit sunt, quae et! Beatae, reiciendis. Distinctio, reiciendis.</p>
+                <div class="share">
+                    <a href="#" class="btn fa-brands fa-instagram"></a>
+                    <a href="#" class="btn fa-brands fa-linkedin"></a>
+                    <a href="#" class="btn fa-brands fa-twitter"></a>
+                    <a href="#" class="btn fa-brands fa-facebook"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Our Stores</h3>
+                <div class="links">
+                    <a href="https://goo.gl/maps/3bxPZuAd7xwWxwZs7">Miryalaguda</a>
+                    <a href="https://goo.gl/maps/mhSmW1G6DhCZvfw5A">Dilshuknagar</a>
+                    <a href="https://goo.gl/maps/97ubwSUFWx97d8zb7">Ameerpet</a>
+                    <a href="https://goo.gl/maps/ivWVttzJkRUx8Eyd8">Mehedipatnam</a>
+                    <a href="https://goo.gl/maps/ivWVttzJkRUx8Eyd8">Abids</a>
+                    <a href="https://goo.gl/maps/ivWVttzJkRUx8Eyd8">Tarnaka</a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <div class="links">
+                    <a href="#Home">Home</a>
+                    <a href="#categories">categories</a>
+                    <a href="#products">products</a>
+                    <a href="#deals">Deals</a>
+                    <a href="#contact">contact</a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Download app</h3>
+                <div class="links">
+                    <a href="#">Google play</a>
+                    <a href="#">App store</a>
+                    <a href=""><img src="./img/download.png"></a>
+                </div>
+            </div>
+        </div>
+        <h1 class="credits">
+            Developed by <span> Nandu Varma</span> |All Rights Reserved|
+        </h1>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="ecommerce.js"></script>
+</body>
+</html>
